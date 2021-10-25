@@ -10,7 +10,7 @@ export default function Footer() {
     >
       <div className="text-center p-3">
         VideoChan © 2021 Copyright:
-        <a className="text-white" href="www.github.com">
+        <a className="text-white" href="https://github.com/TylerJVannoy">
           Tyler Vannoy
         </a>
       </div>
