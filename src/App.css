@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 header {
   position: absolute;
@@ -34,6 +35,7 @@ header .logo {
   background: #111;
   transition: 0.5s;
   z-index: 2;
+  animation: fadein 3s;
 }
 .showcase.active {
   right: 300px;
@@ -47,6 +49,7 @@ header .logo {
   height: 100%;
   object-fit: cover;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -54,16 +57,14 @@ header .logo {
   width: 100%;
   height: 100%;
   background: #099ce6;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 3s;
+}
+.video-list {
+  display: block;
+  align-items: flex-end;
 }
 .text {
   position: relative;
   z-index: 10;
-  animation: fadein 4s;
 }
 
 .text h2 {
@@ -72,6 +73,7 @@ header .logo {
   color: #fff;
   line-height: 1em;
   text-transform: uppercase;
+  overflow: hidden;
 }
 .text h3 {
   font-size: 4em;
@@ -149,6 +151,76 @@ header .logo {
 .menu ul li a:hover {
   color: #03a9f4;
 }
+.video-card {
+  margin-top: 95px;
+}
+.video-item {
+  border: 1px solid #099ce6;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.video-item:hover {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
+
+  cursor: pointer;
+}
+.custom-navbar {
+  border-bottom: 1px solid white;
+}
+.search-text {
+  animation: slidein 2s;
+}
+
+.navbar-style {
+  background-color: #099ce6 !important;
+}
+.videocontainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  animation: fadein 2s;
+  background-color: rgb(39, 37, 37);
+}
+.custom-card {
+  background-color: #099ce6;
+}
+.content-background {
+  background-color: rgb(39, 37, 37);
+}
+.responsive-iframe {
+  margin: 4px;
+  position: absolute;
+  top: 1;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 85%;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 16px;
+  transition: 0.4s;
+  z-index: 9999;
+}
+
+.search-box input {
+  display: block;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  transition: 0.4s;
+}
 
 @media (max-width: 991px) {
   .showcase,
@@ -176,6 +248,11 @@ header .logo {
   }
 }
 
+@media (max-width: 767px) {
+  .sidebar {
+    margin-top: 50px;
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -191,5 +268,17 @@ header .logo {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }

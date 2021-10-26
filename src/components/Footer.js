@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./Footer.css";
-
 export default function Footer() {
   return (
     <footer
@@ -10,7 +8,7 @@ export default function Footer() {
     >
       <div className="text-center p-3">
         VideoChan © 2021 Copyright:
-        <a className="text-white" href="https://github.com/TylerJVannoy">
+        <a className="text-white" href="www.github.com">
           Tyler Vannoy
         </a>
       </div>

@@ -9,7 +9,7 @@ const SearchBar = ({ search }) => {
   };
 
   return (
-    <form className="mt-2" onSubmit={onSubmit}>
+    <form className="mt-2 search-box" onSubmit={onSubmit}>
       <div className="input-group">
         <label></label>
         <input
@@ -19,14 +19,7 @@ const SearchBar = ({ search }) => {
           placeholder="Enter your search..."
           onChange={e => setTerm(e.target.value)}
         ></input>
-        <div>
-          <button
-            className="btn btn-outline-secondary bg-white border-start-0 border  ms-n3 "
-            type="button"
-          >
-            <i className="fa fa-search"></i>
-          </button>
-        </div>
+        <div></div>
       </div>
     </form>
   );

@@ -5,6 +5,8 @@ import useVideos from "./components/hooks/useVideos";
 import LandingPage from "./components/LandingPage";
 import CataloguePage from "./components/CataloguePage";
 
+import "./App.css";
+
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videos, search] = useVideos();
